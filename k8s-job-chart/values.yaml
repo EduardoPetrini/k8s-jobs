@@ -1,0 +1,7 @@
+
+k8sJob:
+  name: k8s-job
+
+  image:
+    name: eduardopetrini/k8s-job
+    tag: latest

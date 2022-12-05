@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: k8s-job
+spec:
+  backoffLimit: 4
+  ttlSecondsAfterFinished: 86400
+  template:
+    spec:
+      containers:
+      - name: hello
+        image: eduardopetrini/k8s-job:latest
+        imagePullPolicy: Never
+      restartPolicy: OnFailure
